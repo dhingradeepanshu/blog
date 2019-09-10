@@ -9,6 +9,7 @@
   opacity: 0;
   animation: 1s slideInTop 0.3s forwards;
 }
+
 hr{
   width:55%;
   background-color: #888888;
@@ -24,25 +25,33 @@ div{
   opacity: 0;
   animation: 1s leftToRight 1s forwards;
 }
-.blogs{
-  padding:1%;
+.row1{
+  margin: 0;
+  padding: 1%;
+}
+.pack{
+  flex: 1;
   border-radius: 10px 25px 40px 80px;
   border: 1px solid #888888;
 }
+.blogs{
+  padding:1%;
+  
+}
 .blogs:hover{
   box-shadow: 1px 1px 20px 0px #bbbbbb;
+  border-radius: 10px 25px 40px 80px;
 }
 .img_div img{
   width:100%;
   opacity:0.9;
-
   margin: -20% 0;
-  overflow: hidden;
+
 }
 .img_div{
   border-radius: 10px;
   overflow: hidden;
-  margin:0;
+  margin:3%;
   border:0;
 }
 .blog_p{
@@ -60,6 +69,7 @@ div{
   border-radius:190px;
   background-image: linear-gradient(#333333,#444444);
   color: #f2f2f2;
+  width: 35%;
 }
 .see{
   text-align:right;
@@ -81,7 +91,7 @@ div{
 @keyframes slideInTop {
   100% {
     opacity: 1;
-    margin-top: 0;
+    margin-top: 2%;
   }
 }
 @keyframes leftToRight{
@@ -96,19 +106,34 @@ div{
     margin-right: 0;
   }
 }
+@media screen and (min-width: 992px){
+  .row1{
+    display: flex;
+  }
+}
 @media screen and (max-width: 992px) and (min-width: 770px){
   .img_div{
     display:none;
   }
   .side_img{
     display:inline-block;
+    flex: 1;
   }
   .blogs{
     display: inline-block;
+    flex: 1;
+  }
+  .pack{
+    display: flex;
   }
   .side_img img{
-    width:100%;
+    width: 100%;
     border-radius: 10px;
+  }
+}
+@media screen and (max-width: 770px){
+  .blogs{
+    display: block;
   }
 }
 .div_2{
